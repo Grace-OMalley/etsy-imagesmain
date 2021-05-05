@@ -7,10 +7,11 @@ const port = 8080
 
 app.use(express.static('client/dist'))
 
-app.get('/data', async (req, res) => {
+app.get('/images', async (req, res) => {
 
   db.find()
   .then((data) => {
+    console.log('data', data)
     res.send(data[0])
   })
 })
