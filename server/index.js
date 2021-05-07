@@ -11,8 +11,7 @@ app.get('/images', async (req, res) => {
 
   db.find()
   .then((data) => {
-    console.log('data', data)
-    res.send(data[0])
+    res.send(data[1])
   })
 })
 

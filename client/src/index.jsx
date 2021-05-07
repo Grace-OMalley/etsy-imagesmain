@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Display from './components/Display.jsx';
 import ImageList from './components/ImageList.jsx';
+
 //import "./styles.css";
 const axios = require('axios');
 
@@ -10,7 +11,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       image: '',
-      imageList: {}
+      imageList: [],
+      show: false
     }
     this.onImageClick = this.onImageClick.bind(this);
     this.onNextClick = this.onNextClick.bind(this);
@@ -20,11 +22,10 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('/images')
     .then((response) => {
-      console.log('response', response)
-
+      let linksList = Object.values(response.data.imagesUrl)
       this.setState({
-        image: response.data.imagesUrl.image_one,
-        imageList: response.data.imagesUrl
+        image: linksList[0],
+        imageList: linksList
       })
     })
   }
@@ -36,14 +37,35 @@ class App extends React.Component {
   }
 
   onPreviousClick() {
-    console.log('previous')
-
-
+    for (let i = 0; i < this.state.imageList.length; i++) {
+      if (this.state.imageList[i] === this.state.image) {
+        if (i === 0) {
+          this.setState({
+            image: this.state.imageList[this.state.imageList.length - 1]
+          })
+        } else {
+          this.setState({
+            image: this.state.imageList[i - 1]
+          })
+        }
+      }
+    }
   }
 
   onNextClick() {
-    console.log('next')
-
+    for (let i = 0; i < this.state.imageList.length; i++) {
+      if (this.state.imageList[i] === this.state.image) {
+        if (i === (this.state.imageList.length - 1)) {
+          this.setState({
+            image: this.state.imageList[0]
+          })
+        } else {
+          this.setState({
+            image: this.state.imageList[i + 1]
+          })
+        }
+      }
+    }
   }
 
   render() {
@@ -52,8 +74,8 @@ class App extends React.Component {
       <div>
         <h1>Image Slider</h1>
         <div className='galleryContainer'>
-          <ImageList links={Object.values(this.state.imageList)} click={this.onImageClick}/>
-          <Display link={this.state.image} nextClick={this.onNextClick} previousClick={this.onPreviousClick}/>
+          <ImageList links={this.state.imageList} click={this.onImageClick}/>
+          <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick}/>
         </div>
       </div>
     )

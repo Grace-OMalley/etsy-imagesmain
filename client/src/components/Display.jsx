@@ -1,25 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from './Modal.jsx'
 
-// function Display(props) {
-//   return (
-//     <div className="displayContainer">
-//       <div className="arrow">
-//         <button onClick={() => props.previousClick()}>Previous</button>
-//       </div>
-//       <img className="display" src={props.link} alt=""/>
-//       <div className="arrow">
-//         <button onClick={() => props.nextClick()}>Next</button>
-//       </div>
-//     </div>
-//   )
-// }
 
 class Display extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      image: ''
+      show: false
     }
   }
 
@@ -29,7 +17,7 @@ class Display extends React.Component {
         <div className="arrow">
           <button onClick={() => this.props.previousClick()}>Previous</button>
         </div>
-        <img className="display" src={this.props.link} alt=""/>
+        <img className="display" src={this.props.link} onClick={this.showModal} />
         <div className="arrow">
           <button onClick={() => this.props.nextClick()}>Next</button>
         </div>
