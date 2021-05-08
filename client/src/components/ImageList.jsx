@@ -7,7 +7,7 @@ const ImageList = (props) => {
   return(
     <div className="galleryContent">
       {props.links.map((link, i) => {
-          return <Image key={i} link={link} click={props.click}/>
+          return <Image key={i} link={link} click={props.imageClick}/>
         }
       )}
     </div>

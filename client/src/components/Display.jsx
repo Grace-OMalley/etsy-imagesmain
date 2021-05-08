@@ -9,6 +9,20 @@ class Display extends React.Component {
     this.state = {
       show: false
     }
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+  }
+
+  showModal() {
+    this.setState({
+      show: true
+    })
+  }
+
+  hideModal() {
+    this.setState({
+      show: false
+    })
   }
 
   render() {
@@ -21,9 +35,11 @@ class Display extends React.Component {
         <div className="arrow">
           <button onClick={() => this.props.nextClick()}>Next</button>
         </div>
+        <div>
+          <Modal link={this.props.link} links={this.props.links} hide={this.hideModal} show={this.state.show} imageClick={this.props.imageClick} nextClick={this.props.nextClick} previousClick={this.props.previousClick}/>
+        </div>
       </div>
     )
-
   }
 }
 

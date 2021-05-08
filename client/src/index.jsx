@@ -74,8 +74,8 @@ class App extends React.Component {
       <div>
         <h1>Image Slider</h1>
         <div className='galleryContainer'>
-          <ImageList links={this.state.imageList} click={this.onImageClick}/>
-          <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick}/>
+          <ImageList links={this.state.imageList} imageClick={this.onImageClick}/>
+          <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick} imageClick={this.onImageClick}/>
         </div>
       </div>
     )
