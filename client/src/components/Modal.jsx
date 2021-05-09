@@ -1,40 +1,48 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ImageList from './ImageList.jsx';
-import Image from './Image.jsx';
+import ModalImage from './ModalImage.jsx';
+import InnerImageZoom from 'react-inner-image-zoom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css'
+
+
 
 class Modal extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      image: this.props.link,
-      imageList: this.props.links
+      image: '',
+      imageList: []
     }
   }
 
-  test () {
-    this.setState({
-      image: this.props.link,
-      imageList: this.props.links
-    })
-  }
+
 
   render() {
     if (!this.props.show) {
       return null;
     }
+
     return (
       <div className="modal display-block">
         <div className="modal-main">
-          <h2 onClick={() => this.test()}>Modal</h2>
-          <ImageList links={this.props.links} imageClick={this.props.imageClick}/>
+
+          <h2 onClick={() => this.props.hide()}>Modal</h2>
+
+          <div className="galleryModalContent">
+            {this.props.links.map((link, i) => {
+              return <ModalImage key={i} link={link} click={this.props.imageClick}/>
+            }
+           )}
+          </div>
           <div className="arrow">
             <button onClick={() => this.props.previousClick()}>Previous</button>
           </div>
-          <img className="display" src={this.props.link}/>
+          <InnerImageZoom src={this.props.link} />
           <div className="arrow">
             <button onClick={() => this.props.nextClick()}>Next</button>
           </div>
+
         </div>
       </div>
     )
@@ -42,3 +50,4 @@ class Modal extends React.Component {
 }
 
 export default Modal;
+

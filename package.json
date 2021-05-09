@@ -16,8 +16,10 @@
     "body-parser": "^1.19.0",
     "faker": "^5.5.3",
     "mongoose": "^5.12.6",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-inner-image-zoom": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",

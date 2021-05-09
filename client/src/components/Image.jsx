@@ -1,15 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// const Image = (props) => {
-
-//   return(
-//     <div>
-//       <img className="image" src={props.link} onClick={() => props.click(props.link)} onMouseEnter={() => console.log('hovering...')}/>
-//     </div>
-//   )
-// }
-
 class Image extends React.Component {
   constructor(props) {
     super(props)
@@ -26,19 +17,18 @@ class Image extends React.Component {
       opacity: 0.75,
       cursor: 'pointer'
     })
-
-}
+  }
 
 mouseLeave() {
     this.setState({
       opacity: 0.5
     })
-}
+  }
 
   render() {
     return (
-      <div style={{opacity: this.state.opacity}, {cursor: this.state.cursor}}>
-        <img className="image" src={this.props.link} onClick={() => this.props.click(this.props.link)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
+      <div style={{cursor: this.state.cursor}}>
+        <img style={{opacity: this.state.opacity}} className="image" src={this.props.link} onClick={() => this.props.click(this.props.link)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
       </div>
     )
   }
