@@ -19,7 +19,7 @@ class Image extends React.Component {
     })
   }
 
-mouseLeave() {
+  mouseLeave() {
     this.setState({
       opacity: 0.5
     })

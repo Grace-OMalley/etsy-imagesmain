@@ -22,26 +22,26 @@ const imagesSchema = new mongoose.Schema({
 
 const Image = mongoose.model('Images', imagesSchema);
 
-// let generateFakeData = () => {
+let generateFakeData = () => {
 
-//   let count = 0;
-//   while (count < 100) {
-//     let fakeImage = new Image({
-//       itemId: faker.datatype.number(),
-//       storeId: faker.datatype.number(),
-//       imagesUrl: {
-//         image_one: faker.image.image(),
-//         image_two: faker.image.image(),
-//         image_three: faker.image.image(),
-//         image_four: faker.image.image(),
-//         image_five: faker.image.image()
-//       }
-//     })
-//     fakeImage.save()
-//     count++
-//   }
-// }
-// generateFakeData()
+  let count = 0;
+  while (count < 100) {
+    let fakeImage = new Image({
+      itemId: faker.datatype.number(),
+      storeId: faker.datatype.number(),
+      imagesUrl: {
+        image_one: faker.image.image(),
+        image_two: faker.image.image(),
+        image_three: faker.image.image(),
+        image_four: faker.image.image(),
+        image_five: faker.image.image()
+      }
+    })
+    fakeImage.save()
+    count++
+  }
+}
+generateFakeData()
 
 
 let find = () => {
