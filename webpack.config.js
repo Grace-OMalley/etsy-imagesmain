@@ -19,7 +19,7 @@ module.exports = {
     ]
   },
    output: {
-    filename: 'bundle.js',
+    filename: 'images-bundle' + Date.now() + '.js',
     path: __dirname + '/client/dist'
   },
   mode: 'development'

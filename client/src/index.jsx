@@ -17,6 +17,19 @@ class App extends React.Component {
       modalImageList: [],
       show: false
     }
+
+    axios.get('/images')
+    .then((response) => {
+      let linksList = Object.values(response.data.imagesUrl)
+      this.setState({
+        image: linksList[0],
+        imageList: linksList,
+        modalImage: linksList[0],
+        modalImageList: linksList,
+        show: false
+      })
+    })
+
     this.onImageClick = this.onImageClick.bind(this);
     this.onPreviousClick = this.onPreviousClick.bind(this);
     this.onNextClick = this.onNextClick.bind(this);
@@ -27,23 +40,9 @@ class App extends React.Component {
     this.hideModal = this.hideModal.bind(this);
   }
 
-  componentDidMount() {
-    axios.get('/images')
-    .then((response) => {
-      let linksList = Object.values(response.data.imagesUrl)
-      this.setState({
-        image: linksList[0],
-        imageList: linksList,
-        modalImage: linksList[0],
-        modalImageList: linksList
-      })
-    })
-  }
-
   onImageClick(link) {
     this.setState({
-      image: link,
-      modalImage: link
+      image: link
     })
   }
 
@@ -123,6 +122,8 @@ class App extends React.Component {
 
   showModal() {
     this.setState({
+      //check displayed image
+      modalImage: this.state.image,
       show: true
     })
   }
@@ -138,15 +139,18 @@ class App extends React.Component {
     return (
       <div>
         <div className='image-carousel'>
-          <ImageList links={this.state.imageList} imageClick={this.onImageClick}/>
+          <ImageList link={this.state.image} links={this.state.imageList} imageClick={this.onImageClick}/>
           <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick} imageClick={this.onImageClick} showModal={this.showModal}/>
         </div>
         <div>
-          <Modal link={this.state.modalImage} links={this.state.modalImageList} hide={this.hideModal} show={this.state.show} previousClick={this.onPreviousModalClick} nextClick={this.onNextModalClick} imageClick={this.onModalGalleryClick}/>
+            { this.state.show && <Modal link={this.state.modalImage} links={this.state.modalImageList} hide={this.hideModal} show={this.state.show} previousClick={this.onPreviousModalClick} nextClick={this.onNextModalClick} imageClick={this.onModalGalleryClick}/>
+            }
         </div>
       </div>
     )
   }
 }
+
+export default App;
 
 ReactDOM.render(<App />, document.getElementById('app'));

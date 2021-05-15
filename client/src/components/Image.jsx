@@ -28,7 +28,7 @@ class Image extends React.Component {
   render() {
     return (
       <div style={{cursor: this.state.cursor}}>
-        <img style={{opacity: this.state.opacity}} className="image" src={this.props.link} onClick={() => this.props.click(this.props.link)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
+        <img style={{opacity: this.state.opacity}} className="image" id={`${this.props.link === this.props.links[0] ? "selected" : ""}`} src={this.props.link} onClick={() => this.props.click(this.props.link)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
       </div>
     )
   }
