@@ -1,6 +1,9 @@
 import React from 'react';
+//import fake data
 import renderer from 'react-test-renderer';
 import App from '../client/src/index.jsx';
+import {mount, shallow, render} from 'enzyme';
+
 
 // test('App renders', () => {
 //   const component = renderer.create(

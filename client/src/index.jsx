@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import Display from './components/Display.jsx';
 import ImageList from './components/ImageList.jsx';
 import Modal from './components/Modal.jsx'
-//import "./styles.css";
+import styles from "./styles/index.module.css";
+
 
 const axios = require('axios');
 
@@ -138,6 +139,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <h2>Images</h2>
         <div className='image-carousel'>
           <ImageList link={this.state.image} links={this.state.imageList} imageClick={this.onImageClick}/>
           <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick} imageClick={this.onImageClick} showModal={this.showModal}/>
@@ -152,4 +154,4 @@ class App extends React.Component {
 }
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('images'));

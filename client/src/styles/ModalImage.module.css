@@ -1,0 +1,12 @@
+.modalImage {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  margin: 5px;
+}
+
+.selectedModal {
+  border: 2px solid white;
+}

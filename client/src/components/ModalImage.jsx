@@ -1,16 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// const ModalImage = (props) => {
-
-//   return (
-//     <div>
-//       <img className="modal-image" src={props.link} onClick={() => props.click(props.link)}/>
-//     </div>
-//   )
-// }
-
-// export default ModalImage;
+import styles from '../styles/ModalImage.module.css';
 
 
 class ModalImage extends React.Component {
@@ -28,12 +18,11 @@ class ModalImage extends React.Component {
     })
   }
 
-
   render() {
     if (this.state.selected === true) {
       return (
         <div>
-          <img className="modal-image selected-modal" src={this.props.link} onClick={() => {
+          <img className={styles.modalImage, styles.selectedModal} src={this.props.link} onClick={() => {
           this.props.click(this.props.link);
           this.handleClick();
           }}/>
@@ -43,7 +32,7 @@ class ModalImage extends React.Component {
     }
     return (
       <div>
-        <img className="modal-image" src={this.props.link} onClick={() => {
+        <img className={styles.modalImage} src={this.props.link} onClick={() => {
           this.props.click(this.props.link);
           this.handleClick();
           }}/>
