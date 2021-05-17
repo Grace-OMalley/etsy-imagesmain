@@ -1,0 +1,57 @@
+.displayContainer {
+  display: flex;
+  margin: 5px;
+  align-items: center;
+}
+
+.arrow {
+  padding: 15px;
+}
+
+.mainDisplay {
+  border-radius: 10px;
+}
+
+.like {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 18px;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+  position: relative !important;
+  top: 50% !important;
+  background: #FFFFFF;
+  border: inherit;
+}
+
+.nextButton {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 18px;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+  position: relative !important;
+  top: 50% !important;
+  background: #FFFFFF;
+  border: inherit;
+}
+
+.prevButton {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 18px;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+  position: relative !important;
+  top: 50% !important;
+  background: #FFFFFF;
+  border: inherit;
+}
+
+
