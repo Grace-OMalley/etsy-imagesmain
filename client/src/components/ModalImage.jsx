@@ -12,7 +12,6 @@ class ModalImage extends React.Component {
   }
 
   handleClick() {
-    console.log('modal click')
     this.setState({
       selected: true
     })
@@ -22,7 +21,7 @@ class ModalImage extends React.Component {
     if (this.state.selected === true) {
       return (
         <div>
-          <img className={styles.modalImage, styles.selectedModal} src={this.props.link} onClick={() => {
+          <img className={`${styles.modalImage} ${styles.selectedModal}`} src={this.props.link} onClick={() => {
           this.props.click(this.props.link);
           this.handleClick();
           }}/>
