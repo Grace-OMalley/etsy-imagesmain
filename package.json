@@ -1,5 +1,5 @@
 {
-  "name": "guitarcentre-imagesmain",
+  "name": "etsy-imagesmain",
   "description": "> Project description",
   "author": "",
   "license": "ISC",
@@ -22,7 +22,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-inner-image-zoom": "^2.0.1"
+    "react-inner-image-zoom": "^2.0.1",
+    "sinon": "^10.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",

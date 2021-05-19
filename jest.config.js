@@ -5,6 +5,10 @@
 
 module.exports = {
   "setupFilesAfterEnv": ["<rootDir>/test/setupTests.js"],
+
+  "moduleNameMapper": {
+    "^.+\\.(css|less|scss)$": "babel-jest"
+  },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
