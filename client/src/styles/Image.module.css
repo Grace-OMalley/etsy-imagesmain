@@ -8,12 +8,13 @@
   margin: 5px;
 }
 
-.modal-main {
-  display: flex;
+#selected {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+  border: 2px solid black;
+  opacity: 1;
   margin: 5px;
-  align-items: center;
-}
-
-.selected-modal {
-  border: 2px solid white;
 }

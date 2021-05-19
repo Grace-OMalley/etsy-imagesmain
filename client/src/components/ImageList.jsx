@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Image from './Image.jsx';
-import styles from '../styles/ImageList.module.css';
-
 
 const ImageList = (props) => {
 
