@@ -11,6 +11,8 @@
 .mainDisplay {
   border-radius: 10px;
   cursor: pointer;
+  max-width: 750px;
+  max-height: 500px;
 }
 
 .button {

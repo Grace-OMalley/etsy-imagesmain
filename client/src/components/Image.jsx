@@ -28,11 +28,13 @@ class Image extends React.Component {
 
   render() {
     return (
-      <div style={{cursor: this.state.cursor}}>
-        <img style={{opacity: this.state.opacity}} className={styles.image} id={`${this.props.link === this.props.links[0] ? "selected" : ""}`} src={this.props.link} onClick={() => this.props.click(this.props.link)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
+      <div style={{cursor: this.state.cursor}} onClick={() => this.props.click(this.props.link)}>
+        <img style={{opacity: this.state.opacity}} className={styles.image} src={this.props.link} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
       </div>
     )
   }
 }
 
 export default Image;
+
+// id={`${this.props.link === this.props.links[0] ? "selected" : ""}`}
