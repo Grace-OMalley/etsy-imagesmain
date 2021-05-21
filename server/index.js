@@ -19,10 +19,13 @@ app.use(morgan('dev'));
 //   res.send('This is a proxy service which proxies to Billing and Account APIs.');
 // });
 
-app.get('/images', async (req, res) => {
-  db.find()
+app.get('/images/:itemId' , async (req, res) => {
+  let itemId = req.params.itemId;
+
+  db.findOne(itemId)
   .then((data) => {
-    res.send(data[1])
+    console.log("data", data)
+    res.send(data)
   })
 })
 
