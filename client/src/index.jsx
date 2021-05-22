@@ -155,7 +155,6 @@ class App extends React.Component {
 
     return (
       <div>
-        <h2>Images</h2>
         <div className={styles.images}>
           <ImageList link={this.state.image} links={this.state.imageList} imageClick={this.onImageClick}/>
           <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick} imageClick={this.onImageClick} showModal={this.showModal}/>
