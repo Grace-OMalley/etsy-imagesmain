@@ -1,0 +1,12 @@
+@media screen and (max-width: 900px) {
+  div #gallery {
+    min-width: 105px;
+  }
+}
+
+#gallery {
+  display: flex;
+  min-width: 230px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

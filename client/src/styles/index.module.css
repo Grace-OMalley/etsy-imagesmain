@@ -1,6 +1,9 @@
 .images {
   display: flex;
   margin: 5px;
-  background-color: black;
   max-width: 60%
+}
+
+#imageList {
+  margin: 5px;
 }

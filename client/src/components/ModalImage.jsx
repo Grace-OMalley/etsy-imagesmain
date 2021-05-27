@@ -2,41 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles/ModalImage.module.css';
 
+const ModalImage = (props) => {
 
-class ModalImage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      selected: false
-    }
-  }
-
-  handleClick() {
-    this.setState({
-      selected: true
-    })
-  }
-
-  render() {
-    if (this.state.selected === true) {
+  if (props.size === 'sm') {
+    if(props.selected) {
       return (
         <div>
-          <img className={`${styles.modalImage} ${styles.selectedModal}`} src={this.props.link} onClick={() => {
-          this.props.click(this.props.link);
-          this.handleClick();
-          }}/>
+          <img className={styles.sm} src={props.link} onClick={() => {props.click(props.link)}} id={styles.selected}/>
         </div>
-
+      )
+    } else {
+      return (
+        <div>
+          <img className={styles.sm} src={props.link} onClick={() => {props.click(props.link)}}/>
+        </div>
       )
     }
-    return (
-      <div>
-        <img className={styles.modalImage} src={this.props.link} onClick={() => {
-          this.props.click(this.props.link);
-          this.handleClick();
-          }}/>
-      </div>
-    )
+  } else if (props.size === 'lg') {
+    if(props.selected) {
+      return (
+        <div>
+          <img className={styles.lg} src={props.link} onClick={() => {props.click(props.link)}} id={styles.selected}/>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <img className={styles.lg} src={props.link} onClick={() => {props.click(props.link)}}/>
+        </div>
+      )
+    }
   }
 }
 

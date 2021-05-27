@@ -35,6 +35,7 @@
   top: 50% !important;
   background: #FFFFFF;
   border: inherit;
+  margin: 5px;
 }
 
 .exitButton {
@@ -54,4 +55,8 @@
 
 .arrow {
   padding: 15px;
+}
+
+.modalDisplay {
+  border-radius: 10px;
 }

@@ -6,32 +6,25 @@ class Image extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      opacity: .5,
-      cursor: ''
+      opacity: ''
     }
-    this.mouseEnter = this.mouseEnter.bind(this);
-    this.mouseLeave = this.mouseLeave.bind(this);
-  }
-
-  mouseEnter() {
-    this.setState({
-      opacity: 0.75,
-      cursor: 'pointer'
-    })
-  }
-
-  mouseLeave() {
-    this.setState({
-      opacity: 0.5
-    })
   }
 
   render() {
-    return (
-      <div style={{cursor: this.state.cursor}} onClick={() => this.props.click(this.props.link)}>
-        <img style={{opacity: this.state.opacity}} className={styles.image} src={this.props.link} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}/>
-      </div>
-    )
+
+    if (this.props.selected) {
+      return (
+        <div onClick={() => this.props.click(this.props.link)}>
+          <img className={styles.image} src={this.props.link} id={styles.selected}/>
+        </div>
+      )
+    } else {
+      return (
+        <div onClick={() => this.props.click(this.props.link)}>
+          <img className={styles.image} src={this.props.link}  />
+        </div>
+      )
+    }
   }
 }
 

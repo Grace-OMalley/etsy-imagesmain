@@ -1,12 +1,30 @@
-.modalImage {
-  display: block;
-  max-width:230px;
-  max-height:95px;
-  width: auto;
-  height: auto;
-  margin: 5px;
+#selected {
+  border: 2px solid white;
 }
 
-.selectedModal {
-  border: 2px solid white;
+@media screen and (max-width: 900px) {
+  div .lg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.sm {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 7px;
+  margin: 3px;
+}
+
+.lg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 7px;
+  margin: 3px;
 }

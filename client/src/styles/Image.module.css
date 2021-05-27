@@ -3,10 +3,15 @@
   height: 60px;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
+  opacity: .5;
+  border-radius: 7px;
+}
+
+.image:hover {
+  opacity: .75;
 }
 
 #selected {
-  border: 2px solid black;
   opacity: 1;
-  margin: 5px;
 }
