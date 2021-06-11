@@ -5,7 +5,7 @@ import Image from './Image.jsx';
 const ImageList = (props) => {
 
   return(
-    <div className="galleryContent">
+    <div>
       {props.links.map((link, i) => {
           if (link === props.link) {
             return <Image key={i} link={link} links={props.links} click={props.imageClick} selected={true}/>
@@ -20,4 +20,3 @@ const ImageList = (props) => {
 
 export default ImageList;
 
-//id={`${this.props.link === this.props.links[0] ? styles.selected : ""}`}

@@ -19,29 +19,6 @@ class App extends React.Component {
       show: false
     }
 
-    // axios.get('/images')
-    // .then((response) => {
-    //   let linksList = Object.values(response.data.imagesUrl)
-    //   this.setState({
-    //     image: linksList[0],
-    //     imageList: linksList,
-    //     modalImage: linksList[0],
-    //     modalImageList: linksList,
-    //     show: false
-    //   })
-    // })
-
-    this.onImageClick = this.onImageClick.bind(this);
-    this.onPreviousClick = this.onPreviousClick.bind(this);
-    this.onNextClick = this.onNextClick.bind(this);
-    this.onModalGalleryClick = this.onModalGalleryClick.bind(this);
-    this.onPreviousModalClick = this.onPreviousModalClick.bind(this);
-    this.onNextModalClick = this.onNextModalClick.bind(this);
-    this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
-  }
-
-  componentDidMount() {
     const query = window.location.search.slice(8) || '1';
 
     axios.get('/images/' + query)
@@ -55,6 +32,15 @@ class App extends React.Component {
         show: false
       })
     })
+
+    this.onImageClick = this.onImageClick.bind(this);
+    this.onPreviousClick = this.onPreviousClick.bind(this);
+    this.onNextClick = this.onNextClick.bind(this);
+    this.onModalGalleryClick = this.onModalGalleryClick.bind(this);
+    this.onPreviousModalClick = this.onPreviousModalClick.bind(this);
+    this.onNextModalClick = this.onNextModalClick.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
   onImageClick(link) {
@@ -139,7 +125,6 @@ class App extends React.Component {
 
   showModal() {
     this.setState({
-      //check displayed image
       modalImage: this.state.image,
       show: true
     })
@@ -155,7 +140,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <div className={styles.images}>
+        <div className={styles.images} >
           <ImageList id={styles.imageList} link={this.state.image} links={this.state.imageList} imageClick={this.onImageClick}/>
           <Display link={this.state.image} links={this.state.imageList} nextClick={this.onNextClick} previousClick={this.onPreviousClick} imageClick={this.onImageClick} showModal={this.showModal}/>
         </div>

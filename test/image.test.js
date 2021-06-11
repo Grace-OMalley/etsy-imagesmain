@@ -17,3 +17,6 @@ describe('Image tests', function () {
     expect(clickFn).toHaveBeenCalled();
   });
 });
+
+//jest snapshot testing
+//enzyme with jsdom

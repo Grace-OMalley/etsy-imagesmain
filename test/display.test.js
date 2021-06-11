@@ -15,4 +15,6 @@ describe('Display tests', function () {
     const wrapper = shallow(<Display />);
     expect(wrapper.find('.mainDisplay')).toHaveLength(1);
   });
+
+
 });

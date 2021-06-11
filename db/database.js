@@ -1,6 +1,8 @@
 const faker = require('faker');
 const mongoose = require('mongoose')
+//mongoose.connect('mongodb://localhost/images', {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect('mongodb://localhost/images', {useNewUrlParser: true, useUnifiedTopology: true});
+
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -38,17 +40,14 @@ const Image = mongoose.model('Images', imagesSchema);
 //       }
 //     })
 //     fakeImage.save()
+//     console.log('seeded' + count)
 //     count++
 //   }
 // }
-// generateFakeData()
-
 
 let findOne = (itemId) => {
   return Image.findOne({itemId: itemId})
 }
-
-
 
 module.exports = {
   findOne: findOne

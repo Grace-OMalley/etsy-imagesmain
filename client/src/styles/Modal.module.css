@@ -1,5 +1,6 @@
 .modalBackground {
   position: fixed;
+  z-index: 11;
   top: 0;
   left: 0;
   width:100%;
@@ -7,13 +8,8 @@
   background: rgba(0, 0, 0, 0.75);
 }
 
-.displayBlock {
-  display: block;
-}
-
 .modalMain {
   display: flex;
-  margin: 5px;
   align-items: center;
   position:fixed;
   width: 80%;
@@ -25,38 +21,21 @@
 
 .button {
   cursor: pointer;
-  display: inline-block;
   min-height: 48px;
   min-width: 48px;
-  padding: 12px 18px;
+  padding: 9px 12px;
   border-radius: 50% !important;
-  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
-  position: relative !important;
-  top: 50% !important;
-  background: #FFFFFF;
   border: inherit;
-  margin: 5px;
+  margin: 10px;
 }
 
-.exitButton {
-  cursor: pointer;
-  display: inline-block;
-  min-height: 48px;
-  min-width: 48px;
-  padding: 12px 18px;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+#exit {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #FFFFFF;
-  border: inherit;
-}
-
-.arrow {
-  padding: 15px;
+  top: 0px;
+  right: 0px;
 }
 
 .modalDisplay {
   border-radius: 10px;
 }
+

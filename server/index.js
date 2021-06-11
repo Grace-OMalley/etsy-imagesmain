@@ -21,10 +21,10 @@ app.use(morgan('dev'));
 
 app.get('/images/:itemId' , async (req, res) => {
   let itemId = req.params.itemId;
+  //db.generateFakeData()
 
   db.findOne(itemId)
   .then((data) => {
-    console.log("data", data)
     res.send(data)
   })
 })
