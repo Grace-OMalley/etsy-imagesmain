@@ -23,9 +23,10 @@
 
 #### API
 
+> The following endpoint returns mock images to populate the image carousel
+
 GET /images/:itemId
-
-
+   - Retrieves itemId, storeId, and imagesUrl which contains five links to mock images
 
 ## Requirements
 
