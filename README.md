@@ -12,18 +12,20 @@
 
 ## Table of Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-2. [API Endpoints] (#API Endpoints)
+1. [Usage](#usage)
+    - [API](#api)
+2. [Requirements](#requirements)
 3. [Development](#development)
 
 ## Usage
 
-### API Endpoints
+> This service contains an image carousel with a modal component. To coincide with this component there is one endpoint that interacts with a MongoDB database in order to either seed of display mock images per itemId. This service acts as the "source of truth" for the images rendered in the proxy server.
+
+#### API
 
 GET /images/:itemId
 
-> Some usage instructions
+
 
 ## Requirements
 
