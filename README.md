@@ -1,6 +1,6 @@
-# Project Name
+# Etsy Images Carousel
 
-> Project description
+> Image carousel displaying fake item images with full modal and zoom functionality
 
 ## Related Projects
 
