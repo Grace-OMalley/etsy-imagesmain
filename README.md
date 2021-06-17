@@ -14,9 +14,14 @@
 
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
-1. [Development](#development)
+2. [API Endpoints] (#API Endpoints)
+3. [Development](#development)
 
 ## Usage
+
+### API Endpoints
+
+GET /images/:itemId
 
 > Some usage instructions
 
