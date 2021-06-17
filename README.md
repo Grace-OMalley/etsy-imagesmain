@@ -4,10 +4,11 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Grace-OMalley/etsy-imagesmain-proxy
+  - https://github.com/Grace-OMalley/etsy-reviews
+  - https://github.com/Grace-OMalley/etsy-reviews-proxy
+  - https://github.com/Grace-OMalley/etsy-addtocart
+  - https://github.com/Grace-OMalley/etsy-addtocart-proxy
 
 ## Table of Contents
 
