@@ -20,9 +20,18 @@
 ## Usage
 
 > This service contains an image carousel with a modal component. To coincide with this component there is one endpoint that interacts with a MongoDB database in order to either seed of display mock images per itemId. This service acts as the "source of truth" for the images rendered in the proxy server.
+> 
 
-<a href="https://imgur.com/aWDJ1Aw">
-![alt text](https://imgur.com/aWDJ1Aw)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/73359960/123568878-dbeaf800-d78a-11eb-92ea-c526ca5f4ac3.gif)
+
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/73359960/123568875-dab9cb00-d78a-11eb-99b4-85435e2d5352.gif)
+
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/73359960/123568874-d9889e00-d78a-11eb-9782-a513d4505ef1.gif)
+
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/73359960/123568866-d4c3ea00-d78a-11eb-9386-ec2c64c4c61a.gif)
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/73359960/123569117-574ca980-d78b-11eb-80f0-f1a1964460a1.gif)
+
 
 #### API
 
