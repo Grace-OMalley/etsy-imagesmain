@@ -21,6 +21,8 @@
 
 > This service contains an image carousel with a modal component. To coincide with this component there is one endpoint that interacts with a MongoDB database in order to either seed of display mock images per itemId. This service acts as the "source of truth" for the images rendered in the proxy server.
 
+<img src="https://imgur.com/aWDJ1Aw"/>
+
 #### API
 
 > The following endpoint returns mock images to populate the image carousel
